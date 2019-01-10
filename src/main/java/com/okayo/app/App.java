@@ -22,9 +22,9 @@ public class App
     	Prestation prestation = new Prestation("Okayo - Description 0", "", 100, 19.6, 1, 0);
     	Prestation prestation2 = new Prestation("Okayo - Description 1", "", 100, 19.6, -1, 0);
     	Prestation prestation3 = new Prestation("Description 2", "", -100, 19.6, 1, 0);
-    	Prestation prestation4 = new Prestation("Okayo - Description 3", "", 50, 19.6, 2, 50);
+    	Prestation prestation4 = new Prestation("Okayo - Description 3", "", 100, 19.6, 1, 50);
     	Prestation prestation5 = new Prestation("Okayo - Description 4", "", 100, 19.6, 1, 0);
-    	Prestation prestation6 = new Prestation("Okayo - Description (offered line)", "", 100, 19.6, 2, 100);
+    	Prestation prestation6 = new Prestation("Okayo - Description (offered line)", "", 100, 19.6, 1, 100);
     	/** reference HA001 créée au hasard **/
     	Designation designation = new Designation(prestation, "HA001"); 
     	Designation designation2 = new Designation(prestation2, "HA001");
@@ -69,7 +69,7 @@ public class App
     	//supprimer une prestation
     	//descriptionService.supprimerPrestation(designation3);
     	//supprimer une facture
-    	descriptionService.supprimerFacture(designation.getRefFacture());
+    	//descriptionService.supprimerFacture(designation.getRefFacture());
     	    	
     	System.out.println("\nFin");
     }
