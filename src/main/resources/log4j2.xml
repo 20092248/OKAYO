@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%-5level %logger{36} - %msg%n"/>
+    </Console>
+    <File name="File" fileName="logfile.log" append="true">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+  	</File>
+    <File name="FileDebug" fileName="debugaop.log" append="true">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+  	</File>
+  </Appenders>
+  <Loggers>
+    <Logger name="com.infotel.travel" level="debug">
+    	<AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="AOP" level="info">
+    	<AppenderRef ref="FileDebug"/>
+    	<AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.hibernate" level="warn">
+	<AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.springframework" level="warn">
+    	<AppenderRef ref="Console"/>
+    </Logger>
+    <Root level="info">
+      <AppenderRef ref="Console" level="warn"/>
+    </Root>
+  </Loggers>
+</Configuration>
