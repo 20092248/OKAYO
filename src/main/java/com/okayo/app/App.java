@@ -69,7 +69,7 @@ public class App
     	//supprimer une prestation
     	//descriptionService.supprimerPrestation(designation3);
     	//supprimer une facture
-    	//descriptionService.supprimerFacture(designation.getRefFacture());
+    	descriptionService.supprimerFacture(designation.getRefFacture());
     	    	
     	System.out.println("\nFin");
     }
